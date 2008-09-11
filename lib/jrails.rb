@@ -169,6 +169,7 @@ module ActionView
 
 			def build_insertion(insertion)
 				insertion ||= 'html'
+				insertion = insertion.to_s
 				insertion = 'append' if insertion == 'bottom'
 				insertion = 'prepend' if insertion == 'top'
 				insertion.downcase
